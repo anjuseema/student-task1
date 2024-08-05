@@ -1,0 +1,16 @@
+{% extends "predictions/base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block header %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <div class="alert alert-success mt-4">
+        <h2>Predicted Grade: {{ grade }}</h2>
+    </div>
+    <a href="{% url 'predict_grade' %}" class="btn btn-secondary mt-3">Predict Another Grade</a>
+</div>
+{% endblock %}
+
+

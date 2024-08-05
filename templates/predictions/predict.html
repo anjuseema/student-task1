@@ -1,0 +1,19 @@
+{% extends "predictions/base.html" %}
+
+{% block title %}Predict Student Grade{% endblock %}
+
+{% block header %}Predict Student Grade{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center">
+    <div class="col-md-8">
+        <form method="post" class="mt-4">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mt-3">Predict</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
